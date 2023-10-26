@@ -1,7 +1,7 @@
 WScript.Sleep 1000
 Set oShell = CreateObject("Wscript.Shell")
 pid = WScript.Arguments(0)
-oShell.run "taskkill /F /PID" & pid, 0, True
+oShell.run "taskkill /F /PID " & pid, 0, True
 Set objFSO=CreateObject("Scripting.FileSystemObject")
 objFSO.DeleteFile WScript.Arguments(1)
 Do While True
